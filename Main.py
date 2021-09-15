@@ -21,9 +21,9 @@ def main():
                 0- Exit
             """
         )
+
         choice = int(choice)
-        if choice > 0:
-            print(choice)
+
         if choice is 1:
             print(f"The volume of the cube is: {calcCube()} cm.")
             con = input("Do you like to close the app? y/n: ")
