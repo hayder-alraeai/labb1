@@ -1,7 +1,5 @@
 import math
 
-choice = 1
-
 
 def calcCube():
     a = input("Please enter the height of the side in cm:")
@@ -14,8 +12,7 @@ def calcTetrahedron():
 
 
 def main():
-    global choice
-    while choice > 0:
+    while True:
         print("Choose one of the folowing choices: ")
         choice = input(
             """
@@ -29,13 +26,18 @@ def main():
             print(choice)
         if choice is 1:
             print(f"The volume of the cube is: {calcCube()} cm.")
-            choice = 0
+            con = input("Do you like to close the app? y/n: ")
+            if con is "n":
+                break
         elif choice is 2:
             print(f"The volume of the tetrahedron is: {calcTetrahedron()} cm.")
-            choice = 0
+            con = input("Do you like to close the app? y/n: ")
+            if con is "n":
+                break
+        elif choice is 0:
+            break
         else:
-            if choice is not 0:
-                print("OBS!Your choice is not one of the possible choices!")
+            print("OBS!Your choice is not one of the possible choices!")
 
 
 main()
